@@ -6,7 +6,7 @@ const FetchUser = (props) => {
   const {user, setUser} = useContext(AuthContext)
   const [loaded, setLoaded] = useState(false)
   useEffect(()=> {
-
+    checkUser()
   }, [])
   const checkUser = async () => {
     if(user || !localStorage.getItem('access-token')) {
