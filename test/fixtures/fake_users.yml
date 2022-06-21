@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  registry: MyString
 
 two:
   name: MyString
-  registry: MyString
