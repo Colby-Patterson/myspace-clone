@@ -31,9 +31,9 @@ const AuthProvider = ({ children }) => {
 
   const register = async (user) => {
     try {
-      let res = await axios.delete('/api/auth/', user)
+      let res = await axios.post('/api/auth', user)
       setUser(res.data.data)
-      navigate('/login')
+      navigate('/')
     } catch (err) {
       alert('Error occurred with register')
       console.log(err)
