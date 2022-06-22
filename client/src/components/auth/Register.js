@@ -9,9 +9,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email)
-    console.log(password)
-    console.log(passwordConfirmation)
     if(password.length < 6) {
       alert('Password must be at least six characters or longer')
       return
