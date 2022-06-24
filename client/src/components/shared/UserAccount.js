@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import User from "./User";
 
 const UserAccount = () => {
   const {user} = useContext(AuthContext)
@@ -22,10 +23,17 @@ const UserAccount = () => {
     }
   }
 
+  const renderFakeUsers = () => {
+    return (
+        fakeUsers.map(f=> <User key={f.id} {...f} />)
+    )
+  }
+
   return (
     <div>
       <h1>Account Settings</h1>
       <p>Hello {user.email}</p>
+      {renderFakeUsers()}
     </div>
   )
 }
